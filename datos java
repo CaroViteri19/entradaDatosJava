@@ -1,0 +1,41 @@
+package taller;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println();
+        // Calcular el promedio de calificaciones
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Por favor ingrese la primera nota");
+        int nota1 = scanner.nextInt();
+        System.out.println("Por favor ingrese la segunda nota");
+        int nota2 = scanner.nextInt();
+        System.out.println("Por favor ingrese la tercera nota");
+        int nota3 = scanner.nextInt();
+
+        double promedio = (double)(nota1 + nota2 + nota3) / 3;
+        System.out.println("El promedio de sus notas es " + promedio);
+
+        // Crear nuevo usuario
+        System.out.println("Para crear su nuevo usuario necesitamos los siguientes datos:");
+        System.out.println("Por favor ingrese su nombre completo");
+        scanner.nextLine();
+        String nombreCompleto = scanner.nextLine();
+        System.out.println("Ingrese su edad");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Ingrese su nacionalidad");
+        String nacionalidad = scanner.nextLine();
+        System.out.println("Ingrese su ocupacion");
+        String ocupacion = scanner.nextLine();
+        System.out.println("Ingrese su salario mensual");
+        double salario = scanner.nextDouble();
+
+        int anoActual = 2025;
+        int anoNacimiento = anoActual - edad;
+
+        System.out.println("Su año de nacimiento es: " + anoNacimiento);
+
+        scanner.close(); 
+    }
+}
